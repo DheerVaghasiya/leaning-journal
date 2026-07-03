@@ -81,7 +81,7 @@ client = OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
 # Using differently-sized/tuned local models to stand in for "competitors"
 CONTESTANTS = {
     "Model A (llama3.2)": "llama3.2",
-    "Model B (mistral)": "mistral",
+    "Model B (mistral)": "gemma3:270m",
 }
 
 JUDGE_MODEL = "llama3.2"
@@ -106,7 +106,7 @@ Question: {prompt}
 
 Response 1: {responses['Model A (llama3.2)']}
 
-Response 2: {responses['Model B (mistral)']}
+Response 2: {responses['Model B (gemma3:270m)']}
 
 Decide which response is clearer, more accurate, and more helpful.
 Reply with just "Response 1" or "Response 2" and one sentence explaining why."""
